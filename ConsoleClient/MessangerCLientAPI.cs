@@ -40,7 +40,7 @@ namespace Messenger
             reader.Close();
             dataStream.Close();
             response.Close();
-            if ((status.ToLower() == "ok") && (responseFromServer != "Not found"))
+            if ((status.ToLower() == "ok") && (responseFromServer != "NotFound"))
             {
                 Message deserializedMsg = JsonConvert.DeserializeObject<Message>(responseFromServer);
                 //Console.WriteLine(deserializedMsg);

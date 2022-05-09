@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Messenger", "Messenger.csproj", "{7CD3160F-AB87-488B-8F3F-A86EDD928787}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleClient", "ConsoleClient.csproj", "{7CD3160F-AB87-488B-8F3F-A86EDD928787}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASP_Server", "..\ASP_Server\ASP_Server.csproj", "{253A6A33-DB53-4438-BD2A-35AC0D70145B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ASP_Server", "..\ASP_Server\ASP_Server.csproj", "{253A6A33-DB53-4438-BD2A-35AC0D70145B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsClient", "..\WindowsFormsClient\WindowsFormsClient.csproj", "{844AB70D-42D0-41FF-822B-C0F9C6DBC31D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{253A6A33-DB53-4438-BD2A-35AC0D70145B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{253A6A33-DB53-4438-BD2A-35AC0D70145B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{253A6A33-DB53-4438-BD2A-35AC0D70145B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{844AB70D-42D0-41FF-822B-C0F9C6DBC31D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{844AB70D-42D0-41FF-822B-C0F9C6DBC31D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{844AB70D-42D0-41FF-822B-C0F9C6DBC31D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{844AB70D-42D0-41FF-822B-C0F9C6DBC31D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
