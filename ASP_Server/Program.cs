@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ASPCoreServer
+namespace ASP_Server
 {
     public class Program
     {

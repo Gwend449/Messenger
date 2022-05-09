@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Messenger
 {
     [Serializable]
-    internal class Message
+    public class Message
     {
         public string UserName { get; set; }
         public string MessageText { get; set; }
@@ -20,17 +20,16 @@ namespace Messenger
             TimeStamp = timeStamp;
         }
 
-         public Message()
+        public Message()
         {
             UserName = "System";
             MessageText = "Server is running...";
-            TimeStamp = DateTime.Now ;
+            TimeStamp = DateTime.Now;
         }
 
-        public override string? ToString()
+        public override string ToString()
         {
             string output = String.Format("{0} <{2}>: {1}", UserName, MessageText, TimeStamp);
-
             return output;
         }
     }
