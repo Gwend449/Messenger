@@ -1,4 +1,5 @@
 ﻿using System;
+using Newtonsoft.Json;
 
 namespace Messenger
 {
@@ -6,11 +7,15 @@ namespace Messenger
     {
         static void Main(string[] args)
         {
-            Message msg = new Message();
+            Message msg = new Message("RusAl", "Privet", DateTime.UtcNow);
 
-            Console.WriteLine("Начало проекта!");
+            string output = JsonConvert.SerializeObject(msg);
+            Console.WriteLine(output);
+            Message deserializedMsg = JsonConvert.DeserializeObject<Message>(output);
+            Console.WriteLine(deserializedMsg);
 
-            Console.WriteLine(msg);
+            //{ "UserName":"RusAl","MessageText":"Privet","TimeStamp":"2022-05-09T09:55:22.9699725Z"}
+            //RusAl < 09.05.2022 9:55:22 >: Privet
         }
     }
 }
