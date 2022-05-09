@@ -1,34 +1,31 @@
-﻿using Messenger;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using Messenger;
 using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace ASP_Server.Controllers
+namespace ASPCoreServer.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class Messanger : ControllerBase
     {
-        static List<Message> ListofMessages = new List<Message>();
-        // GET: api/<Messanger>
-        [HttpGet]
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
-
+        static List<Message> ListOfMessages = new List<Message>();
         // GET api/<Messanger>/5
         [HttpGet("{id}")]
         public string Get(int id)
         {
-            string OutputString = "Not Found";
-            if ((id < ListofMessages.Count) && (id >= 0))
+            string OutputString = "Not found";
+            if ((id < ListOfMessages.Count) && (id >= 0))
             {
-                OutputString = JsonConvert.SerializeObject(ListofMessages[id]);
+                OutputString = JsonConvert.SerializeObject(ListOfMessages[id]);
             }
-            
-            return "Hochu v VDV" + id.ToString();
+            Console.WriteLine(String.Format("Запрошено сообщение № {0} : {1}", id, OutputString));
+            return OutputString;
         }
 
         // POST api/<Messanger>
@@ -39,22 +36,12 @@ namespace ASP_Server.Controllers
             {
                 return BadRequest();
             }
-            ListofMessages.Add(msg);
-            Console.WriteLine(String.Format("Всего сообщений: {0} Посланное сообщение: {1}", ListofMessages.Count, msg));
+            ListOfMessages.Add(msg);
+            Console.WriteLine(String.Format("Всего сообщений: {0} Посланное сообщение: {1}", ListOfMessages.Count, msg));
             //return new NoContentResult();
             return new OkResult();
         }
 
-        // PUT api/<Messanger>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
 
-        // DELETE api/<Messanger>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
     }
 }
