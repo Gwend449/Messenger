@@ -19,6 +19,21 @@ namespace WindowsFormsClient
 
         private void button1_Click(object sender, EventArgs e)
         {
+            UserNameTB.Text = UserNameTB2.Text;
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UserNameTB_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bindingSource1_CurrentChanged(object sender, EventArgs e)
+        {
 
         }
     }
